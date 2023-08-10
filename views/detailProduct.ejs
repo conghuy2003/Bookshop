@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <style>
+   
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 25%;
+    margin-top: 10px;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    width: 94%;
+    margin: auto;
+    /* margin-left: -15px; */
+}
+.btn-primary {
+    color: #fff;
+    background-color: #16181a;
+}
+.slide img {
+  width: 100%;
+  height: 200px;
+}
+.footer {
+  background-color: #d0b05f;
+  height: 60px;
+}
+.footer p, a {
+  text-align: center;
+  line-height: 60px;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="app">
+      <div class="slide">
+        <img src="" alt="">
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Sách</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/add-product">Thêm sản phẩm</a>
+            </li>
+        </div>
+      </nav>
+      
+
+
+      <div class="mt-4">
+        <div class="row">
+          <% for (let product of hung) { %>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card">
+                <a href="">
+                    <img class="card-img-top" src="img/<%= product.images %>" alt="img/<%= product.images %>">
+                </a>
+                <div class="card-body">
+                    <a href="">
+                        <h5 class="card-title"><%= product.nameProduct %></h5>
+                    </a>
+                    <p class="card-text"><%=product.sortDescription %></p>
+                    <a href="#" class="btn btn-primary">Xem thêm</a>
+                </div>
+                </div>
+            </div>
+            <% } %>
+    
+        </div>
+    </div>
+    </div>
+    <nav class="footer">
+      <p><a href="conghuy2003@gmail.com">conghuy2003@gmail.com</a></p>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

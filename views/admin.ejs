@@ -1,0 +1,59 @@
+
+<html>  
+	<head>  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1,minimum-scale=0.9,user-scalable=no" />
+	<title> Login Admin </title>  
+    <link rel="stylesheet" href="../public/css/style.css" />
+
+	</style>  
+	</head>  
+	
+	<body>  
+
+	<section id="main">
+	<div id="banner">
+		<!-- <img src="https://www.shutterstock.com/image-vector/
+		dark-yellow-vector-banner-circles-spheres-645707818"> -->
+	</div>
+		<form id="login-module" method="post">  
+		
+			<h3>Đăng nhập</h3> 
+			<% if (typeof checkLogin !== 'undefined') { %>
+				<div class="alert alert-danger" role="alert">
+				  <%= checkLogin %>
+				</div>
+			  <% } %>
+
+			<fieldset id="inputs">  
+				<input id="username" name="username" placeholder="Hãy nhập username..." autofocus required>  <br/>   
+				<input id="password" name="password" type="password" placeholder="Hãy nhập password..." required> 	
+			</fieldset>  
+			
+			<div id="userinfo">	
+				<div class="row forget-passwd">
+					<span>
+						<input type="checkbox" name="remember" id="remember"
+						value="true" checkecd="checked"/>
+						<label for="remember">Nhớ đăng nhập?</label>
+					<span>
+					<a id="ifrogot" href="#">Quên mật khẩu?</a>
+				</div>
+				<input type="submit" id="submit" value="Đăng nhập" style="text-align:center"> 
+			</div>	
+			<div style="margin:2rem auto"></div>
+			<div id="extrabox">
+				<div id="register-now">
+					<span>Vẫn chưa có tài khoản?</span>
+					<a id="register" href="/users/signup">Đăng kí nhanh!</a> 
+				</div>
+			</div>
+			
+		</form>  
+	</section>	
+	
+
+	<!-- <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>   -->
+	
+	</body>  
+	</html>  
